@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MD Plomberie — plomberie — Montagne</title>
+  <meta name="description" content="MD Plomberie à Montagne : expert en dépannage d'urgence, installation sanitaire et entretien de chaudières. Artisan certifié avec avis clients 5 étoiles." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #005A87;
+      --secondary: #F6C700;
+      --background: #F4F8FB;
+      --text: #222B32;
+      --cta: #E94F2E;
+      --radius: 4px;
+      --font-heading: 'Montserrat', sans-serif;
+      --font-body: 'Open Sans', sans-serif;
+      --section-padding: 64px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--background);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 { font-family: var(--font-heading); }
+
+    img { max-width: 100%; display: block; }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ===== NAVIGATION ===== */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #fff;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: var(--primary);
+      letter-spacing: -0.5px;
+    }
+
+    .nav-logo span { color: var(--secondary); }
+
+    .nav-links {
+      display: none;
+      list-style: none;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--primary); }
+
+    .nav-cta-btn {
+      background: var(--cta);
+      color: #fff !important;
+      padding: 8px 18px;
+      border-radius: var(--radius);
+      transition: opacity 0.2s !important;
+    }
+
+    .nav-cta-btn:hover { opacity: 0.88; }
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: #fff;
+      padding: 16px 20px 24px;
+      border-top: 1px solid #eee;
+    }
+
+    .mobile-menu.open { display: flex; }
+
+    .mobile-menu a {
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+      padding: 12px 0;
+      border-bottom: 1px solid #f0f0f0;
+      transition: color 0.2s;
+    }
+
+    .mobile-menu a:hover { color: var(--primary); }
+
+    @media (min-width: 768px) {
+      .nav-links { display: flex; }
+      .hamburger { display: none; }
+      .mobile-menu { display: none !important; }
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      background: var(--primary);
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      width: 100%;
+    }
+
+    .hero-text { flex: 1; }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(246,199,0,0.15);
+      border: 1px solid var(--secondary);
+      color: var(--secondary);
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: var(--radius);
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.6rem, 5vw, 3.8rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--secondary);
+    }
+
+    .hero-sub {
+      font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+      color: rgba(255,255,255,0.85);
+      line-height: 1.65;
+      margin-bottom: 32px;
+      max-width: 520px;
+    }
+
+    .hero-btns {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .btn-primary {
+      background: var(--cta);
+      color: #fff;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 15px 28px;
+      border-radius: var(--radius);
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.2s;
+      text-align: center;
+      display: block;
+      width: 100%;
+    }
+
+    .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    .btn-secondary {
+      background: transparent;
+      color: #fff;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 14px 28px;
+      border-radius: var(--radius);
+      border: 2px solid rgba(255,255,255,0.5);
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+      text-align: center;
+      display: block;
+      width: 100%;
+    }
+
+    .btn-secondary:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+
+    .hero-visual {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-visual-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius);
+      padding: 32px;
+      text-align: center;
+      width: 100%;
+      max-width: 380px;
+    }
+
+    .hero-icon {
+      font-size: 4rem;
+      margin-bottom: 16px;
+    }
+
+    .hero-visual-card h3 {
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .hero-visual-card p {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 24px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+
+    .hero-stat {
+      text-align: center;
+    }
+
+    .hero-stat-num {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--secondary);
+      display: block;
+    }
+
+    .hero-stat-label {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.7);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    @media (min-width: 768px) {
+      .hero-inner {
+        flex-direction: row;
+        align-items: center;
+        padding: 64px 40px;
+      }
+      .hero-btns {
+        flex-direction: row;
+      }
+      .btn-primary, .btn-secondary {
+        width: auto;
+      }
+    }
+
+    /* ===== SECTION BASE ===== */
+    .section {
+      padding: 48px 16px;
+    }
+
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .section-title span { color: var(--primary); }
+
+    .section-desc {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.7;
+      max-width: 640px;
+    }
+
+    .section-header { margin-bottom: 40px; }
+
+    @media (min-width: 768px) {
+      .section { padding: var(--section-padding) 24px; }
+    }
+
+    /* ===== SERVICES ===== */
+    .services { background: #fff; }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    @media (min-width: 600px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .service-card {
+      background: var(--background);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      border-left: 4px solid var(--primary);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,90,135,0.12);
+    }
+
+    .service-icon {
+      font-size: 2rem;
+      margin-bottom: 14px;
+    }
+
+    .service-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .service-card p {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* ===== URGENCE ===== */
+    .urgence {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .urgence-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: flex-start;
+    }
+
+    .urgence h2 {
+      font-size: clamp(1.3rem, 3vw, 2rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .urgence p {
+      color: rgba(255,255,255,0.85);
+      line-height: 1.7;
+      font-size: 0.95rem;
+      max-width: 560px;
+    }
+
+    .urgence-features {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .urgence-feature {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .urgence-feature::before {
+      content: '✓';
+      background: var(--secondary);
+      color: var(--text);
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .urgence-cta {
+      background: var(--secondary);
+      color: var(--text);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 15px 32px;
+      border-radius: var(--radius);
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.2s;
+      display: inline-block;
+      margin-top: 8px;
+    }
+
+    .urgence-cta:hover { opacity: 0.88; }
+
+    @media (min-width: 768px) {
+      .urgence-inner { flex-direction: row; align-items: center; justify-content: space-between; }
+    }
+
+    /* ===== ABOUT ===== */
+    .about { background: var(--background); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      .about-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .about-text p {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: #444;
+      margin-bottom: 20px;
+    }
+
+    .about-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .about-highlight {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .about-highlight-icon {
+      background: var(--primary);
+      color: #fff;
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .about-visual {
+      background: var(--primary);
+      border-radius: var(--radius);
+      padding: 40px 32px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .about-visual-icon { font-size: 3.5rem; margin-bottom: 16px; }
+
+    .about-visual h3 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .about-visual p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.6;
+    }
+
+    .about-stats {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .about-stat-num {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--secondary);
+      display: block;
+    }
+
+    .about-stat-label {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* ===== REVIEWS ===== */
+    .reviews { background: #fff; }
+
+    .reviews-header {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: 768px) {
+      .reviews-header { flex-direction: row; align-items: flex-end; justify-content: space-between; }
+    }
+
+    .rating-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--background);
+      border: 1px solid #e0e8ef;
+      border-radius: var(--radius);
+      padding: 12px 20px;
+    }
+
+    .rating-stars { color: var(--secondary); font-size: 1.1rem; letter-spacing: 2px; }
+
+    .rating-num {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .rating-count {
+      font-size: 0.8rem;
+      color: #777;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .reviews-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .review-card {
+      background: var(--background);
+      border-radius: var(--radius);
+      padding: 24px;
+      border: 1px solid #e0e8ef;
+      transition: box-shadow 0.2s;
+    }
+
+    .review-card:hover { box-shadow: 0 4px 16px rgba(0,90,135,0.1); }
+
+    .review-stars { color: var(--secondary); font-size: 1rem; margin-bottom: 12px; }
+
+    .review-text {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: #444;
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .review-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    .review-name {
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    /* ===== TARIFS ===== */
+    .tarifs { background: var(--background); }
+
+    .tarifs-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .tarifs-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .tarif-card {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 32px 24px;
+      border: 1px solid #e0e8ef;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .tarif-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,90,135,0.1);
+    }
+
+    .tarif-card.featured {
+      border-color: var(--primary);
+      border-width: 2px;
+      position: relative;
+    }
+
+    .tarif-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--primary);
+      color: #fff;
+      font-family: var(--font-heading);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: var(--radius);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+
+    .tarif-icon { font-size: 2.2rem; margin-bottom: 14px; }
+
+    .tarif-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .tarif-card p {
+      font-size: 0.85rem;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .tarif-note {
+      font-size: 0.8rem;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact { background: #fff; }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    @media (min-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .contact-info h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .contact-item-icon {
+      background: var(--primary);
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-item-text strong {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    .contact-item-text span {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .contact-item-text a {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+    }
+
+    .hours-table tr {
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .hours-table td {
+      padding: 8px 4px;
+      font-size: 0.88rem;
+    }
+
+    .hours-table td:first-child {
+      font-weight: 600;
+      color: var(--text);
+      text-transform: capitalize;
+      width: 50%;
+    }
+
+    .hours-table td:last-child { color: #555; }
+
+    .hours-closed { color: #c0392b !important; font-weight: 600 !important; }
+
+    .contact-form-wrap { }
+
+    .contact-form-wrap h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .contact-form-wrap p {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .form-group { margin-bottom: 16px; }
+
+    .form-group label {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid #d0dce6;
+      border-radius: var(--radius);
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--text);
+      background: var(--background);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--primary);
+    }
+
+    .form-group textarea { resize: vertical; min-height: 110px; }
+
+    .form-submit {
+      background: var(--cta);
+      color: #fff;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 14px 28px;
+      border-radius: var(--radius);
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      transition: opacity 0.2s;
+    }
+
+    .form-submit:hover { opacity: 0.88; }
+
+    /* ===== MAP ===== */
+    .map-section { background: var(--background); }
+
+    .map-wrap {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid #d0dce6;
+    }
+
+    .map-wrap iframe {
+      width: 100%;
+      height: 320px;
+      border: none;
+      display: block;
+    }
+
+    @media (min-width: 768px) {
+      .map-wrap iframe { height: 420px; }
+    }
+
+    /* ===== TRUST SIGNALS ===== */
+    .trust { background: var(--primary); }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .trust-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    .trust-item {
+      text-align: center;
+      padding: 20px 12px;
+    }
+
+    .trust-icon { font-size: 2rem; margin-bottom: 10px; }
+
+    .trust-item h4 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .trust-item p {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: #0d1b24;
+      color: rgba(255,255,255,0.8);
+      padding: 48px 16px 24px;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: 768px) {
+      .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
+    }
+
+    .footer-brand h3 {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .footer-brand h3 span { color: var(--secondary); }
+
+    .footer-brand p {
+      font-size: 0.88rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 16px;
+    }
+
+    .footer-rating {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      padding: 8px 14px;
+    }
+
+    .footer-rating .stars { color: var(--secondary); font-size: 0.9rem; }
+
+    .footer-rating .num {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+    .footer-rating .count {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 16px;
+    }
+
+    .footer-col ul { list-style: none; }
+
+    .footer-col ul li {
+      margin-bottom: 10px;
+      font-size: 0.88rem;
+    }
+
+    .footer-col ul li a {
+      color: rgba(255,255,255,0.65);
+      transition: color 0.2s;
+    }
+
+    .footer-col ul li a:hover { color: var(--secondary); }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 12px;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.65);
+    }
+
+    .footer-contact-item span:first-child { flex-shrink: 0; }
+
+    .footer-contact-item a { color: rgba(255,255,255,0.65); }
+    .footer-contact-item a:hover { color: var(--secondary); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .footer-bottom { flex-direction: row; justify-content: space-between; }
+    }
+
+    .footer-bottom p {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.45);
+    }
+
+    .footer-bottom a {
+      color: rgba(255,255,255,0.55);
+      font-size: 0.8rem;
+      transition: color 0.2s;
+    }
+
+    .footer-bottom a:hover { color: var(--secondary); }
+
+    /* ===== ANIMATIONS ===== */
+    .fade-in {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .fade-in.visible { opacity: 1; }
+
+    /* ===== MODAL ===== */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.72);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-overlay.active { display: flex; }
+
+    .modal-card {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 32px;
+      width: 90%;
+      max-width: 420px;
+      position: relative;
+      animation: fadeInModal 0.2s ease;
+    }
+
+    @keyframes fadeInModal {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      color: #888;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .modal-close:hover { color: var(--text); }
+
+    .modal-title {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 14px;
+      padding-right: 24px;
+    }
+
+    .modal-body {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .modal-cta {
+      display: block;
+      width: 100%;
+      background: var(--cta);
+      color: #fff;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 14px;
+      border-radius: var(--radius);
+      border: none;
+      cursor: pointer;
+      text-align: center;
+      transition: opacity 0.2s;
+    }
+
+    .modal-cta:hover { opacity: 0.88; }
+
+    /* ===== PHONE BUTTON ===== */
+    .phone-float {
+      position: fixed;
+      bottom: 24px;
+      right: 20px;
+      z-index: 900;
+      background: var(--cta);
+      color: #fff;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      box-shadow: 0 4px 16px rgba(233,79,46,0.4);
+      transition: transform 0.2s;
+      text-decoration: none;
+    }
+
+    .phone-float:hover { transform: scale(1.08); }
+
+    @media (min-width: 768px) { .phone-float { display: none; } }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" role="navigation" aria-label="Navigation principale">
+    <div class="nav-inner">
+      <a href="#accueil" class="nav-logo">MD <span>Plomberie</span></a>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#urgence">Urgence</a></li>
+        <li><a href="#a-propos">À propos</a></li>
+        <li><a href="#avis">Avis clients</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="tel:+33675865954" class="nav-cta-btn">📞 Appeler</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" role="menu">
+      <a href="#services" role="menuitem">Services</a>
+      <a href="#urgence" role="menuitem">Urgence</a>
+      <a href="#a-propos" role="menuitem">À propos</a>
+      <a href="#avis" role="menuitem">Avis clients</a>
+      <a href="#tarifs" role="menuitem">Tarifs</a>
+      <a href="#contact" role="menuitem">Contact</a>
+      <a href="tel:+33675865954" role="menuitem" style="color:var(--cta);margin-top:8px;">📞 +33 6 75 86 59 54</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="accueil" aria-label="Accueil">
+    <div class="hero-inner">
+      <div class="hero-text fade-in">
+        <div class="hero-badge">⚡ Artisan certifié · Gironde</div>
+        <h1>Votre plombier de confiance à <em>Montagne</em></h1>
+        <p class="hero-sub">Interventions rapides et efficaces en Gironde. Artisan certifié à votre service.</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-primary">Demander une intervention</a>
+          <a href="#contact" class="btn-secondary">Obtenir un devis gratuit</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-num">5★</span>
+            <span class="hero-stat-label">Note Google</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">22</span>
+            <span class="hero-stat-label">Avis clients</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">100%</span>
+            <span class="hero-stat-label">Satisfaction</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual fade-in">
+        <div class="hero-visual-card">
+          <div class="hero-icon">🔧</div>
+          <h3>Intervention rapide</h3>
+          <p>Dépannage d'urgence, installation sanitaire et entretien de chaudières en Gironde.</p>
+          <div style="margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.2);">
+            <a href="tel:+33675865954" style="color:var(--secondary);font-family:var(--font-heading);font-weight:700;font-size:1.1rem;">📞 06 75 86 59 54</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section services" id="services" aria-label="Nos services">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <div class="section-label">Ce que nous faisons</div>
+        <h2 class="section-title">Nos <span>Services</span></h2>
+        <p class="section-desc">Des prestations de plomberie complètes, réalisées avec soin et professionnalisme à Montagne et en Gironde.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card fade-in">
+          <div class="service-icon">💧</div>
+          <h3>Réparation de fuites</h3>
+          <p>Interventions rapides pour résoudre vos problèmes de fuites.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-icon">🚿</div>
+          <h3>Installation sanitaire</h3>
+          <p>Installation professionnelle de vos équipements sanitaires.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-icon">🔥</div>
+          <h3>Entretien de chaudières</h3>
+          <p>Assurez la longévité de votre chaudière avec notre entretien expert.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-icon">🛁</div>
+          <h3>Rénovation salle de bain</h3>
+          <p>Transformation complète de votre salle de bain avec des matériaux de qualité.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-icon">🔩</div>
+          <h3>Débouchage canalisations</h3>
+          <p>Débouchage rapide et efficace de vos canalisations bouchées.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-icon">🏠</div>
+          <h3>Plomberie neuve</h3>
+          <p>Installation complète de plomberie pour vos constructions neuves.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- URGENCE -->
+  <section class="section urgence" id="urgence" aria-label="Dépannage urgence">
+    <div class="section-inner">
+      <div class="urgence-inner">
+        <div class="fade-in">
+          <div class="section-label" style="color:var(--secondary);">Disponible rapidement</div>
+          <h2>Dépannage d'urgence en Gironde</h2>
+          <p>Une fuite, une canalisation bouchée, une chaudière en panne ? MD Plomberie intervient rapidement pour résoudre vos problèmes de plomberie à Montagne et dans toute la Gironde.</p>
+          <div class="urgence-features">
+            <div class="urgence-feature">Intervention rapide sur devis</div>
+            <div class="urgence-feature">Artisan certifié et expérimenté</div>
+            <div class="urgence-feature">Travail soigné et garanti</div>
+            <div class="urgence-feature">Tarifs transparents et honnêtes</div>
+          </div>
+        </div>
+        <div class="fade-in" style="flex-shrink:0;">
+          <a href="tel:+33675865954" class="urgence-cta">📞 Appeler maintenant</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="a-propos" aria-label="À propos">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-text fade-in">
+          <div class="section-label">Notre histoire</div>
+          <h2 class="section-title">À propos de <span>MD Plomberie</span></h2>
+          <p>MD Plomberie, dirigé par Marc Duprat, est votre partenaire de confiance pour tous vos besoins en plomberie à Montagne et ses environs. Nous offrons des services de réparation de haute qualité, garantissant des interventions rapides et efficaces.</p>
+          <p>Notre engagement envers la satisfaction client est au cœur de notre métier, comme en témoignent nos avis clients 5 étoiles.</p>
+          <div class="about-highlights">
+            <div class="about-highlight">
+              <div class="about-highlight-icon">✓</div>
+              Artisan certifié et qualifié
+            </div>
+            <div class="about-highlight">
+              <div class="about-highlight-icon">✓</div>
+              Interventions rapides et soignées
+            </div>
+            <div class="about-highlight">
+              <div class="about-highlight-icon">✓</div>
+              Devis gratuit et sans engagement
+            </div>
+            <div class="about-highlight">
+              <div class="about-highlight-icon">✓</div>
+              Satisfaction client garantie
+            </div>
+          </div>
+        </div>
+        <div class="about-visual fade-in">
+          <div class="about-visual-icon">👷</div>
+          <h3>Marc Duprat</h3>
+          <p>Artisan plombier expérimenté, Marc Duprat met son savoir-faire au service des habitants de Montagne et de la Gironde depuis de nombreuses années.</p>
+          <div class="about-stats">
+            <div>
+              <span class="about-stat-num">5★</span>
+              <span class="about-stat-label">Note Google</span>
+            </div>
+            <div>
+              <span class="about-stat-num">22</span>
+              <span class="about-stat-label">Avis clients</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section reviews" id="avis" aria-label="Avis clients">
+    <div class="section-inner">
+      <div class="reviews-header fade-in">
+        <div>
+          <div class="section-label">Ce que disent nos clients</div>
+          <h2 class="section-title">Avis <span>Clients</span></h2>
+        </div>
+        <div class="rating-badge">
+          <div class="rating-stars">★★★★★</div>
+          <div class="rating-num">5,0</div>
+          <div class="rating-count">22 avis Google</div>
+        </div>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card fade-in">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">« Excellent à tous les niveaux: Marc Duprat a été disponible, rien à dire sur le tarif et surtout il a fait un travail parfait. On recommande vivement et c'est vraiment le genre de personnes qui mérite... »</p>
+          <div class="review-author">
+            <div class="review-avatar">JL</div>
+            <div class="review-name">JL</div>
+          </div>
+        </div>
+        <div class="review-card fade-in">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">« Une rénovation de salle de bain pas facile d'accès, un chantier sur lequel monsieur Duprat s'est montré de bons conseils, très méticuleux et organisé dans la réalisation et chose importante, respectu... »</p>
+          <div class="review-author">
+            <div class="review-avatar">JB</div>
+            <div class="review-name">Jean-Marie Bousser</div>
+          </div>
+        </div>
+        <div class="review-card fade-in">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">« Très bonne prestation de Monsieur Duprat. Délais respectés, travail soigné. Nous vous le recommandons sans hésitations.... »</p>
+          <div class="review-author">
+            <div class="review-avatar">AG</div>
+            <div class="review-name">Alain Gomrée</div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:32px;" class="fade-in">
+        <a href="https://www.google.com/maps/place/?q=place_id:ChIJrbe0UAbYCgURhI7XB-whn7I" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:var(--background);border:1px solid #d0dce6;border-radius:var(--radius);padding:12px 24px;font-family:var(--font-heading);font-size:0.85rem;font-weight:700;color:var(--primary);transition:box-shadow 0.2s;">
+          Voir tous les avis sur Google →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARIFS -->
+  <section class="section tarifs" id="tarifs" aria-label="Tarifs">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <div class="section-label">Transparence tarifaire</div>
+        <h2 class="section-title">Nos <span>Prestations</span></h2>
+        <p class="section-desc">Devis gratuit et sans engagement. Tarifs honnêtes et transparents pour toutes nos interventions.</p>
+      </div>
+      <div class="tarifs-grid">
+        <div class="tarif-card fade-in">
+          <div class="tarif-icon">💧</div>
+          <h3>Dépannage & Réparation</h3>
+          <p>Fuites, robinetterie, canalisations. Intervention rapide avec devis préalable.</p>
+          <div class="tarif-note">Devis gratuit</div>
+        </div>
+        <div class="tarif-card featured fade-in">
+          <div class="tarif-badge">Le plus demandé</div>
+          <div class="tarif-icon">🚿</div>
+          <h3>Installation & Rénovation</h3>
+          <p>Salle de bain, sanitaires, chauffe-eau. Travail soigné et garanti.</p>
+          <div class="tarif-note">Sur devis personnalisé</div>
+        </div>
+        <div class="tarif-card fade-in">
+          <div class="tarif-icon">🔥</div>
+          <h3>Entretien Chaudière</h3>
+          <p>Révision annuelle, nettoyage, réglage. Prolongez la durée de vie de votre équipement.</p>
+          <div class="tarif-note">Tarif compétitif</div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:32px;" class="fade-in">
+        <a href="#contact" class="btn-primary" style="display:inline-block;width:auto;">Demander un devis gratuit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST SIGNALS -->
+  <section class="section trust" aria-label="Nos engagements">
+    <div class="section-inner">
+      <div class="trust-grid">
+        <div class="trust-item fade-in">
+          <div class="trust-icon">🏆</div>
+          <h4>Artisan certifié</h4>
+          <p>Qualifications professionnelles reconnues</p>
+        </div>
+        <div class="trust-item fade-in">
+          <div class="trust-icon">⚡</div>
+          <h4>Intervention rapide</h4>
+          <p>Réactivité et efficacité garanties</p>
+        </div>
+        <div class="trust-item fade-in">
+          <div class="trust-icon">💬</div>
+          <h4>5 étoiles Google</h4>
+          <p>22 avis clients vérifiés</p>
+        </div>
+        <div class="trust-item fade-in">
+          <div class="trust-icon">📋</div>
+          <h4>Devis gratuit</h4>
+          <p>Sans engagement, tarifs transparents</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact" aria-label="Contact">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <div class="section-label">Prenons contact</div>
+        <h2 class="section-title"><span>Contactez-nous</span></h2>
+        <p class="section-desc">Pour toute demande, veuillez nous appeler ou remplir notre formulaire de contact.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="fade-in">
+          <div class="contact-info">
+            <h3>Informations de contact</h3>
+            <div class="contact-item">
+              <div class="contact-item-icon">📞</div>
+              <div class="contact-item-text">
+                <strong>Téléphone</strong>
+                <span><a href="tel:+33675865954">+33 6 75 86 59 54</a></span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">📍</div>
+              <div class="contact-item-text">
+                <strong>Adresse</strong>
+                <span>53 Rte de Goujon, 33570 Montagne, France</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">🕐</div>
+              <div class="contact-item-text">
+                <strong>Horaires d'ouverture</strong>
+                <span>Lun–Ven : 08h00–18h00</span>
+              </div>
+            </div>
+          </div>
+          <h3 style="font-size:1rem;font-weight:700;color:var(--primary);margin:24px 0 12px;">Horaires détaillés</h3>
+          <table class="hours-table" aria-label="Horaires d'ouverture">
+            <tbody>
+              <tr><td>Lundi</td><td>08:00 – 18:00</td></tr>
+              <tr><td>Mardi</td><td>08:00 – 18:00</td></tr>
+              <tr><td>Mercredi</td><td>08:00 – 18:00</td></tr>
+              <tr><td>Jeudi</td><td>08:00 – 18:00</td></tr>
+              <tr><td>Vendredi</td><td>08:00 – 18:00</td></tr>
+              <tr><td>Samedi</td><td class="hours-closed">Fermé</td></tr>
+              <tr><td>Dimanche</td><td class="hours-closed">Fermé</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="contact-form-wrap fade-in">
+          <h3>Envoyez-nous un message</h3>
+          <p>Pour toute demande, veuillez nous appeler ou remplir notre formulaire de contact.</p>
+          <form id="contactForm" action="#" novalidate>
+            <div class="form-group">
+              <label for="name">Nom complet</label>
+              <input type="text" id="name" name="name" placeholder="Votre nom" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Adresse e-mail</label>
+              <input type="email" id="email" name="email" placeholder="votre@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Téléphone</label>
+              <input type="tel" id="phone" name="phone" placeholder="06 XX XX XX XX" />
+            </div>
+            <div class="form-group">
+              <label for="message">Votre message</label>
+              <textarea id="message" name="message" placeholder="Décrivez votre besoin..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">Envoyer ma demande</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="section map-section" aria-label="Localisation">
+    <div class="section-inner">
+      <div class="section-header fade-in" style="margin-bottom:24px;">
+        <div class="section-label">Où nous trouver</div>
+        <h2 class="section-title">Notre <span>Localisation</span></h2>
+      </div>
+      <div class="map-wrap fade-in">
+        <iframe
+          src="https://maps.google.com/maps?q=44.9546466,-0.1706893&z=16&output=embed"
+          title="MD Plomberie — 53 Rte de Goujon, 33570 Montagne"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <div style="text-align:center;margin-top:16px;" class="fade-in">
+        <a href="https://www.google.com/maps/place/?q=place_id:ChIJrbe0UAbYCgURhI7XB-whn7I" target="_blank" rel="noopener" style="font-family:var(--font-heading);font-size:0.85rem;font-weight:700;color:var(--primary);">
+          Ouvrir dans Google Maps →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" aria-label="Pied de page">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>MD <span>Plomberie</span></h3>
+          <p>Votre artisan plombier de confiance à Montagne et en Gironde. Interventions rapides, travail soigné, satisfaction garantie.</p>
+          <div class="footer-rating">
+            <span class="stars">★★★★★</span>
+            <span class="num">5,0</span>
+            <span class="count">/ 22 avis Google</span>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#services">Nos services</a></li>
+            <li><a href="#urgence">Urgence</a></li>
+            <li><a href="#a-propos">À propos</a></li>
+            <li><a href="#avis">Avis clients</a></li>
+            <li><a href="#tarifs">Tarifs</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <span>📞</span>
+            <span><a href="tel:+33675865954">+33 6 75 86 59 54</a></span>
+          </div>
+          <div class="footer-contact-item">
+            <span>📍</span>
+            <span>53 Rte de Goujon<br>33570 Montagne, France</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>🕐</span>
+            <span>Lun–Ven : 08h00–18h00</span>
+          </div>
+          <div style="margin-top:16px;">
+            <a href="https://www.google.com/maps/place/?q=place_id:ChIJrbe0UAbYCgURhI7XB-whn7I" target="_blank" rel="noopener" style="font-size:0.8rem;color:rgba(255,255,255,0.55);text-decoration:underline;">Voir sur Google Maps</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 MD Plomberie — Marc Duprat. Tous droits réservés.</p>
+        <p>53 Rte de Goujon, 33570 Montagne, France</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PHONE FLOAT -->
+  <a href="tel:+33675865954" class="phone-float" aria-label="Appeler MD Plomberie">📞</a>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" aria-label="Fermer">×</button>
+      <div class="modal-title" id="modalTitle">Formulaire de contact</div>
+      <div class="modal-body">
+        <p>Merci pour votre message ! 🙏</p>
+        <br>
+        <p>Ce formulaire de contact sera activé après l'acquisition de votre site web. Pour mettre en ligne votre site et recevoir directement les demandes de vos clients, contactez notre équipe dès maintenant.</p>
+        <br>
+        <p>Nous vous accompagnons dans la mise en place de votre présence en ligne pour développer votre activité.</p>
+      </div>
+      <a href="mailto:team@kamkod.com?subject=Achat%20site%20MD%20Plomberie%20%E2%80%94%20ChIJrbe0UAbYCgURhI7XB-whn7I" class="modal-cta">
+        Activer mon site web →
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', function() {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        mobileMenu.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Fade-in on scroll
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    fadeEls.forEach(function(el) { observer.observe(el); });
+
+    // Modal
+    const modalOverlay = document.getElementById('modalOverlay');
+    const modalClose = document.getElementById('modalClose');
+    const contactForm = document.getElementById('contactForm');
+
+    function openModal() {
+      modalOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modalOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      openModal();
+    });
+
+    modalClose.addEventListener('click', closeModal);
+
+    modalOverlay.addEventListener('click', function(e) {
+      if (e.target === modalOverlay) closeModal();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const navHeight = document.querySelector('.nav').offsetHeight;
+          const top = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Trigger visible for hero elements immediately
+    document.querySelectorAll('.hero .fade-in').forEach(function(el) {
+      el.classList.add('visible');
+    });
+  </script>
+</body>
+</html>
